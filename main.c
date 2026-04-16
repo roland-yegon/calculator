@@ -33,42 +33,48 @@ int main() {
         scanf("%d", &choice);
 
         if (choice == 1) {
-            printf("Enter two numbers: ");
-            scanf("%d %d", &a, &b);
+            printf("Enter first number: ");
+            scanf("%d", &a);
+            printf("Enter second number: ");
+            scanf("%d", &b);
             res_int = add(a, b);
-            printf("The sum is: %d\n", res_int);
+            printf("Result: %d + %d = %d\n", a, b, res_int);
         }
         else if (choice == 2) {
-            printf("Enter two numbers: ");
-            scanf("%d %d", &a, &b);
+            printf("Enter first number: ");
+            scanf("%d", &a);
+            printf("Enter second number: ");
+            scanf("%d", &b);
             res_int = subtract(a, b);
-            printf("The difference is: %d\n", res_int);
+            printf("Result: %d - %d = %d\n", a, b, res_int);
         }
         else if (choice == 3) {
-            printf("Enter two numbers: ");
-            scanf("%d %d", &a, &b);
+            printf("Enter first number: ");
+            scanf("%d", &a);
+            printf("Enter second number: ");
+            scanf("%d", &b);
             res_int = multiply(a, b);
-            printf("The product is: %d\n", res_int);
+            printf("Result: %d * %d = %d\n", a, b, res_int);
         }
         else if (choice == 4) {
-            printf("Enter numerator: ");
+            printf("Enter first number: ");
             scanf("%d", &a);
-            printf("Enter denominator: ");
+            printf("Enter second number: ");
             scanf("%d", &b);
             if (b == 0) {
                 printf("Error! Cannot divide by zero.\n");
             } else {
                 res_float = divide(a, b);
-                printf("The result is: %.2f\n", res_float);
+                printf("Result: %d / %d = %.2f\n", a, b, res_float);
             }
         }
         else if (choice == 5) {
             printf("Enter a number: ");
             scanf("%d", &num);
             if (isEven(num) == 1) {
-                printf("It is Even\n");
+                printf("%d is Even\n", num);
             } else {
-                printf("It is Odd\n");
+                printf("%d is Odd\n", num);
             }
         }
         else if (choice == 6) {
@@ -78,16 +84,16 @@ int main() {
                 printf("No negative numbers!\n");
             } else {
                 res_int = factorial(n);
-                printf("Factorial is: %d\n", res_int);
+                printf("%d! = %d\n", n, res_int);
             }
         }
         else if (choice == 7) {
             printf("Enter a number: ");
             scanf("%d", &num);
             if (isPrime(num) == 1) {
-                printf("It is a Prime number\n");
+                printf("%d is a Prime number\n", num);
             } else {
-                printf("It is not a Prime number\n");
+                printf("%d is not a Prime number\n", num);
             }
         }
         else if (choice == 8) {
