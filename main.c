@@ -8,154 +8,149 @@ int isEven(int num);
 int factorial(int n);
 int isPrime(int num);
 
-int main()
-{
-    int choice, a, b, num, n;
-    long long result_ll;
-    float result_float;
+int main() {
+    int choice;
+    int a, b, num, n;
+    int res_int;
+    float res_float;
+    int i;
 
-    do
-    {
-        printf("\n*******************************************\n");
-        printf("          FUNCTION CALCULATOR MENU\n");
-        printf("*******************************************\n");
-        printf("1. Addition\n");
-        printf("2. Subtraction\n");
-        printf("3. Multiplication\n");
-        printf("4. Division\n");
-        printf("5. Even or Odd Check\n");
-        printf("6. Factorial\n");
-        printf("7. Prime Number Check\n");
-        printf("8. Quit\n");
+    choice = 0;
+
+    while (choice != 8) {
+        printf("\n-------------------------------------------\n");
+        printf("          MY CALCULATOR PROGRAM            \n");
         printf("-------------------------------------------\n");
-        printf("Your choice: ");
+        printf("1. Add\n");
+        printf("2. Subtract\n");
+        printf("3. Multiply\n");
+        printf("4. Divide\n");
+        printf("5. Check Even/Odd\n");
+        printf("6. Find Factorial\n");
+        printf("7. Check Prime\n");
+        printf("8. Exit\n");
+        printf("Enter your choice: ");
         scanf("%d", &choice);
 
-        switch (choice)
-        {
-        case 1:
-            printf("Enter first number: ");
-            scanf("%d", &a);
-            printf("Enter second number: ");
-            scanf("%d", &b);
-            printf("Result: %d + %d = %d\n", a, b, add(a, b));
-            break;
-
-        case 2:
-            printf("Enter first number: ");
-            scanf("%d", &a);
-            printf("Enter second number: ");
-            scanf("%d", &b);
-            printf("Result: %d - %d = %d\n", a, b, subtract(a, b));
-            break;
-
-        case 3:
-            printf("Enter first number: ");
-            scanf("%d", &a);
-            printf("Enter second number: ");
-            scanf("%d", &b);
-            printf("Result: %d * %d = %d\n", a, b, multiply(a, b));
-            break;
-
-        case 4:
+        if (choice == 1) {
+            printf("Enter two numbers: ");
+            scanf("%d %d", &a, &b);
+            res_int = add(a, b);
+            printf("The sum is: %d\n", res_int);
+        }
+        else if (choice == 2) {
+            printf("Enter two numbers: ");
+            scanf("%d %d", &a, &b);
+            res_int = subtract(a, b);
+            printf("The difference is: %d\n", res_int);
+        }
+        else if (choice == 3) {
+            printf("Enter two numbers: ");
+            scanf("%d %d", &a, &b);
+            res_int = multiply(a, b);
+            printf("The product is: %d\n", res_int);
+        }
+        else if (choice == 4) {
             printf("Enter numerator: ");
             scanf("%d", &a);
             printf("Enter denominator: ");
             scanf("%d", &b);
-            if (b == 0)
-            {
-                printf("Error: Division by zero is not allowed.\n");
+            if (b == 0) {
+                printf("Error! Cannot divide by zero.\n");
+            } else {
+                res_float = divide(a, b);
+                printf("The result is: %.2f\n", res_float);
             }
-            else
-            {
-                result_float = divide(a, b);
-                printf("Result: %d / %d = %.2f\n", a, b, result_float);
-            }
-            break;
-
-        case 5:
-            printf("Enter a number: ");
-            scanf("%d", &num);
-            printf("%d is %s.\n", num, isEven(num) ? "even" : "odd");
-            break;
-
-        case 6:
-            printf("Enter a non-negative integer: ");
-            scanf("%d", &n);
-            if (n < 0)
-            {
-                printf("Factorial is undefined for negative numbers.\n");
-            }
-            else
-            {
-                result_ll = factorial(n);
-                printf("%d! = %lld\n", n, result_ll);
-            }
-            break;
-
-        case 7:
-            printf("Enter a number: ");
-            scanf("%d", &num);
-            printf("%d is %s prime.\n", num, isPrime(num) ? "" : "not");
-            break;
-
-        case 8:
-            printf("Goodbye!\n");
-            break;
-
-        default:
-            printf("Invalid choice. Enter a number from 1 to 8.\n");
         }
-    } while (choice != 8);
+        else if (choice == 5) {
+            printf("Enter a number: ");
+            scanf("%d", &num);
+            if (isEven(num) == 1) {
+                printf("It is Even\n");
+            } else {
+                printf("It is Odd\n");
+            }
+        }
+        else if (choice == 6) {
+            printf("Enter a number: ");
+            scanf("%d", &n);
+            if (n < 0) {
+                printf("No negative numbers!\n");
+            } else {
+                res_int = factorial(n);
+                printf("Factorial is: %d\n", res_int);
+            }
+        }
+        else if (choice == 7) {
+            printf("Enter a number: ");
+            scanf("%d", &num);
+            if (isPrime(num) == 1) {
+                printf("It is a Prime number\n");
+            } else {
+                printf("It is not a Prime number\n");
+            }
+        }
+        else if (choice == 8) {
+            printf("Exiting... Goodbye!\n");
+        }
+        else {
+            printf("Invalid option, try again.\n");
+        }
+    }
 
     return 0;
 }
 
-int add(int a, int b)
-{
-    return a + b;
+int add(int a, int b) {
+    int answer;
+    answer = a + b;
+    return answer;
 }
 
-int subtract(int a, int b)
-{
-    return a - b;
+int subtract(int a, int b) {
+    int answer;
+    answer = a - b;
+    return answer;
 }
 
-int multiply(int a, int b)
-{
-    return a * b;
+int multiply(int a, int b) {
+    int answer;
+    answer = a * b;
+    return answer;
 }
 
-float divide(int a, int b)
-{
-    return (float)a / b;
+float divide(int a, int b) {
+    float answer;
+    answer = (float)a / (float)b;
+    return answer;
 }
 
-int isEven(int num)
-{
-    return (num % 2 == 0) ? 1 : 0;
-}
-
-int factorial(int n)
-{
-    long long result = 1;
-    for (int i = 2; i <= n; i++)
-    {
-        result *= i;
-    }
-    return result;
-}
-
-int isPrime(int num)
-{
-    if (num <= 1)
-        return 0;
-    if (num == 2)
+int isEven(int num) {
+    if (num % 2 == 0) {
         return 1;
-    for (int i = 2; i * i <= num; i++)
-    {
-        if (num % i == 0)
+    } else {
+        return 0;
+    }
+}
+
+int factorial(int n) {
+    int f = 1;
+    int i;
+    for (i = 1; i <= n; i++) {
+        f = f * i;
+    }
+    return f;
+}
+
+int isPrime(int num) {
+    int i;
+    if (num <= 1) {
+        return 0;
+    }
+    for (i = 2; i < num; i++) {
+        if (num % i == 0) {
             return 0;
+        }
     }
     return 1;
 }
