@@ -1,12 +1,29 @@
 # A SIMPLE CALCULATOR.
 
+![License: MIT](https://shields.io)
+![HTML5](https://shields.io)
+![CSS3](https://shields.io)
+![JavaScript](https://shields.io)
+
+
 ## PROJECT OVERVIEW.
 
+### PROJECT DESCRIPTION.
 A basic Calculator built entirely out of:
 
     - HTML 
     - CSS 
     - JAVASCRIPT 
+
+The calculator can perform the following arithmetic operations:
+
+    - Addition
+    - Subtraction
+    - Multiplication
+    - Division
+
+The goal of this project is to learn the fundamentals of web development and collaboration with git and github. 
+
 
 ---  
 ### LIVE HOSTING.
@@ -15,13 +32,15 @@ The Calculator is live [at](https://)
 
 ---
 
+
+
 ### VISUAL SHOWCASE.
 
  
 
 ## CODE STRUCTURE.
 
-```
+```txt
 calculator--|
             |-Docs--|
             |       |-COLLABORATORS.md          #About Collaborators
@@ -42,15 +61,12 @@ calculator--|
 
 ## FEATURES.
 
-The calculator can perform the following arithmetic operations:
+    - Clean user interface.
+    - Responsive button layout.
+    - Basic arithmetic calculations.
+    - Clear button.
+    - Decimal support.
 
-    - Addition
-    - Subtraction
-    - Multiplication
-    - Division
+## LICENSE.
 
-## DOCUMENTATIONS.
-
-Know about [collaborators](/Docs/COLLABORATORS.md)  
-Know about [security](/Docs/SECURITY.md)  
-Know about [MIT license](/Docs/LICENSE.md)  
+This project is licensed under the MIT License - see the [LICENSE](/Docs/LICENSE.md) file for details.
