@@ -1,10 +1,9 @@
 # A SIMPLE CALCULATOR.
 
-![License: MIT](https://shields.io)
-![HTML5](https://shields.io)
-![CSS3](https://shields.io)
-![JavaScript](https://shields.io)
-
+![MIT License](https://shields.io) 
+![HTML5](https://shields.io) 
+![CSS3](https://shields.io) 
+![JavaScript](https://shields.io) 
 
 ## PROJECT OVERVIEW.
 
